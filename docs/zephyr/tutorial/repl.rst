@@ -14,20 +14,27 @@ you should be able to access the REPL directly from your PC. To access
 the prompt over USB-serial you will need to use a terminal emulator 
 program.
 
-Linux
-~~~~~
-Open a terminal and run::
+.. tabs::
 
-    screen /dev/ttyACM0
+    .. tab:: Linux
+        
+        Open a terminal and run::
 
-You can also try ``picocom`` or ``minicom`` instead of screen. Additional permissions
-may be necessary to access this device (eg group ``uucp`` or ``dialout``, or use sudo).
+            screen /dev/ttyACM0 115200
 
-Windows
-~~~~~~~
+        You can also try ``picocom`` or ``minicom`` instead of screen. You may have to use 
+       ``/dev/ttyACM1`` or a higher number for ``ttyACM``. Additional permissions
+        may be necessary to access this device (eg group ``uucp`` or ``dialout``, or use sudo).
 
-Mac
-~~~
+    .. tab:: Windows
+
+        Need get a terminal software (ex. PuTTY) and have board connected 
+
+        In PuTTY > "session" > "serial" > "serial line"=COM port" > open
+
+    .. tab:: Mac
+
+        Also use screen
 
 
 Using the REPL
@@ -45,8 +52,7 @@ you should be presented with the following text::
 Now you can try running MicroPython code directly on your board.
 
 Anything you type at the prompt, indicated by ``>>>``, will be executed after you press 
-the Enter key. MicroPython will run the code that you enter and print the result (if 
-there is one). If there is an error with the text that you enter then an error 
+the Enter key. If there is an error with the text that you enter then an error 
 message is printed.
 
 Start by typing the following at the prompt to make sure it is working::
@@ -77,6 +83,6 @@ If your board has an LED, you can blink it using the following code::
         ...    time.sleep(0.5)
 
 The above code uses an LED location for a FRDM-K64F board (port B, pin 21;
-following Zephyr conventions port are identified by "GPIO_x", where *x*
+following Zephyr conventions ports are identified by "GPIO_x", where *x*
 starts from 0). You will need to adjust it for another board using the board's
 reference materials.

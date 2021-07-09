@@ -53,23 +53,14 @@ Use the :ref:`machine.Pin <machine.Pin>` class::
 
     pin = Pin(("GPIO_1", 21), Pin.IN, Pin.PULL_UP)      # enable internal pull-up resistor
 
-Interrupts
-~~~~~~~~~~
 
-*zephyr read* To respond to Pin change IRQs run::
-
-    from machine import Pin
-
-    SW2 = Pin(("GPIO_2", 6), Pin.IN)
+    switch = Pin(("GPIO_2", 6), Pin.IN)
     SW3 = Pin(("GPIO_0", 4), Pin.IN)
 
-    SW2.irq(lambda t: print("SW2 changed"))
+    switch.irq(lambda t: print("SW2 changed"))
     SW3.irq(lambda t: print("SW3 changed"))
 
-    while True:
-        pass
-
-more on this
+    ...
 
 Hardware I2C bus
 ----------------
