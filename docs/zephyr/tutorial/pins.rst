@@ -3,7 +3,7 @@
 GPIO Pins
 =========
 
-Use `machine.Pin <machine.Pin>` to control I/O pins.
+Use :ref:`machine.Pin <machine.Pin>` to control I/O pins.
 
 For Zephyr, pins are initialized using a tuple of port and pin number ``(\"GPIO_x\", pin#)``
 for the ``id`` value. For example to initialize a pin for the red LED on a FRDM-k64 board::

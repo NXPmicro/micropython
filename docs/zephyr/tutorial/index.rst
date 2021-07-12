@@ -13,5 +13,5 @@ This tutorial is intended to get you started with the Zephyr port.
    intro.rst
    repl.rst
    storage.rst
+   pins.rst
 
-#more rst files here

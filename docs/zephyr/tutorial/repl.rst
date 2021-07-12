@@ -10,31 +10,33 @@ REPL over the serial port
 
 The REPL is available on the UART0 serial peripheral. The baudrate of
 the REPL is 115200. If your board has a USB-serial convertor on it then 
-you should be able to access the REPL directly from your PC. To access 
-the prompt over USB-serial you will need to use a terminal emulator 
+you should be able to access the REPL directly from your PC.
+
+To access the prompt over USB-serial you will need to use a terminal emulator 
 program.
 
-.. tabs::
+Linux
+~~~~~     
 
-    .. tab:: Linux
-        
-        Open a terminal and run::
+Open a terminal and run::
 
-            screen /dev/ttyACM0 115200
+        screen /dev/ttyACM0 115200
 
-        You can also try ``picocom`` or ``minicom`` instead of screen. You may have to use 
-       ``/dev/ttyACM1`` or a higher number for ``ttyACM``. Additional permissions
-        may be necessary to access this device (eg group ``uucp`` or ``dialout``, or use sudo).
+You can also try ``picocom`` or ``minicom`` instead of screen. You may have to use 
+``/dev/ttyACM1`` or a higher number for ``ttyACM``. Additional permissions
+may be necessary to access this device (eg group ``uucp`` or ``dialout``, or use sudo).
 
-    .. tab:: Windows
+Windows
+~~~~~~~
 
-        Need get a terminal software (ex. PuTTY) and have board connected 
+Need get a terminal software (ex. PuTTY) and have board connected 
 
-        In PuTTY > "session" > "serial" > "serial line"=COM port" > open
+In PuTTY > "session" > "serial" > "serial line"=COM port" > open
 
-    .. tab:: Mac
+Mac
+~~~
 
-        Also use screen
+Also use screen
 
 
 Using the REPL
